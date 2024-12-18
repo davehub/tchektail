@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <title>Product Preview Card</title>
+
+  <!-- Import Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            darkCyan: "hsl(158, 36%, 37%)",
+            cream: "hsl(30, 38%, 92%)",
+            veryDarkBlue: "hsl(212, 21%, 14%)",
+            darkGrayishBlue: "hsl(228, 12%, 48%)",
+            white: "hsl(0, 0%, 100%)",
+          },
+          fontFamily: {
+            montserrat: ["Montserrat", "sans-serif"],
+            fraunces: ["Fraunces", "serif"],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="font-montserrat bg-cream flex items-center justify-center min-h-screen">
+  <main class="flex flex-col md:flex-row max-w-[350px] md:max-w-[600px] bg-white rounded-xl overflow-hidden">
+    <!-- Left Image Section -->
+    <div class="w-full md:w-1/2">
+      <picture>
+        <source media="(min-width: 768px)" srcset="../image/tokyo.jpg" />
+        <img src="../image/tokyo.jpg" alt="tokyo"
+          class="w-full h-full object-cover" />
+      </picture>
+    </div>
+
+    <!-- Right Text Section -->
+    <div class="p-6 md:p-10 w-full md:w-1/2">
+      <h1 class="text-2xl tracking-widest uppercase text-darkGrayishBlue">
+        Tokyo
+      </h1>
+      <h3 class="text-sm tracking-widest uppercase text-darkGrayishBlue">
+        Decouvertes et Infrastructures 
+      </h3>
+      <p class="mt-4 text-sm text-black">
+        
+        Shibuya Crossing : L'une des intersections les plus célèbres au monde.
+        Harajuku : Quartier branché avec des boutiques de mode et des cafés originaux.
+        Temple Senso-ji : Le plus ancien temple bouddhiste de Tokyo.
+        Tokyo Skytree : Une tour de télévision offrant une vue panoramique sur la ville.
+        Palais Impérial : La résidence officielle de l'empereur du Japon.
+        Akihabara : Quartier des jeux vidéo et de la culture pop.
+        Ginza : Quartier chic avec des boutiques de luxe.
+        Marché aux poissons de Tsukiji** : L'un des plus grands marchés aux poissons du monde.
+      </p>
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Voyage & Cuisine</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-4xl font-bold">Voyage & Cuisine</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:underline">Accueil</a></li>
+                    <li><a href="#" class="hover:underline">Voyage</a></li>
+                    <li><a href="#" class="hover:underline">Cuisine</a></li>
+                    <li><a href="#" class="hover:underline">À propos</a></li>
+                    <li><a href="#" class="hover:underline">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="mt-10 mx-auto max-w-4xl px-6">
+
+        <!-- SECTION ARTICLES VEDETTES -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-semibold mb-6">Articles Vedettes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <article class="bg-white p-6 rounded-lg shadow-md">
+                <img src="./image/tokyo.jpg" alt="tokyo" class="mb-4 rounded-lg">
+                <h3 class="text-2xl font-bold mb-2">Découverte de Tokyo</h3>
+                <p class="text-gray-700">Explorez les merveilles de Tokyo, une ville où la tradition rencontre la modernité.</p>
+                <a href="./content/tokyo.html" class="text-blue-600 hover:underline mt-4 block">Lire plus</a>
+              </article>
+              <article class="bg-white p-6 rounded-lg shadow-md">
+                <img src="./image/bouailbaisse.jpg" alt="bouillabaisse" class="mb-4 rounded-lg">
+                <h3 class="text-2xl font-bold mb-2">La Bouillabaisse Marseillaise</h3>
+                <p class="text-gray-700">Apprenez à préparer la bouillabaisse, un délice de la cuisine provençale.</p>
+                <a href="./content/bouillabaisse.html" class="text-blue-600 hover:underline mt-4 block">Lire plus</a>
+              </article>
+              <article class="bg-white p-6 rounded-lg shadow-md">
+                <img src="./image/paris.jpg" alt="paris" class="mb-4 rounded-lg">
+                <h3 class="text-2xl font-bold mb-2">Itinéraire à Paris</h3>
+                <p class="text-gray-700">Un guide complet pour explorer Paris en cinq jours, de la Tour Eiffel à Montmartre.</p>
+                <a href="./content/paris.html" class="text-blue-600 hover:underline mt-4 block">Lire plus</a>
+              </article>
+            </div>
+          </section>
+
+          <!-- SECTION CATEGORIES -->
+          <section class="mb-12">
+            <h2 class="text-3xl font-semibold mb-6">Catégories d'Articles</h2>
+            <div class="space-y-4">
+              <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
+                <span class="bg-blue-600 text-white text-sm font-medium px-3 py-1 rounded-full">Voyage</span>
+                <p class="text-gray-700">Découvrez nos articles sur les destinations de voyage.</p>
+              </div>
+              <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
+                <span class="bg-green-600 text-white text-sm font-medium px-3 py-1 rounded-full">Cuisine</span>
+                <p class="text-gray-700">Explorez nos recettes et critiques de restaurants.</p>
+              </div>
+              <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
+                <span class="bg-red-600 text-white text-sm font-medium px-3 py-1 rounded-full">Culture</span>
+                <p class="text-gray-700">Lisez des articles sur la culture et les traditions culinaires.</p>
+              </div>
+              <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
+                <span class="bg-purple-600 text-white text-sm font-medium px-3 py-1 rounded-full">Photographie</span>
+                <p class="text-gray-700">Admirez nos galeries de photos de voyage et de cuisine.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECTION ARTICLES RECENTS -->
+          <section class="mb-12">
+            <h2 class="text-3xl font-semibold mb-6">Articles Récents</h2>
+            <ul class="space-y-4">
+              <li class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold mb-1">Titre de l'Article 1</h3>
+                <p class="text-gray-500 mb-2">Publié le 12 décembre 2024</p>
+                <p class="text-gray-700">Un aperçu rapide de l'article pour susciter l'intérêt du lecteur.</p>
+              </li>
+              <li class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold mb-1">Titre de l'Article 2</h3>
+                <p class="text-gray-500 mb-2">Publié le 10 décembre 2024</p>
+                <p class="text-gray-700">Un aperçu rapide de l'article pour susciter l'intérêt du lecteur.</p>
+              </li>
+              <li class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold mb-1">Titre de l'Article 3</h3>
+                <p class="text-gray-500 mb-2">Publié le 8 décembre 2024</p>
+                <p class="text-gray-700">Un aperçu rapide de l'article pour susciter l'intérêt du lecteur.</p>
+              </li>
+            </ul>
+          </section>
+          
+          <!-- SECTION FORMULAIRES -->
+          <section class="mb-12">
+            <h2 class="text-3xl font-semibold mb-6">Abonnez-vous à notre Lettre d'Information</h2>
+            <form class="bg-white p-6 rounded-lg shadow-md">
+              <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-medium mb-2">Adresse E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
+              </div>
+              <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600">S'abonner</button>
+            </form>
+          </section>
+          
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-6 mt-12">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+          <div class="flex space-x-4 mb-4 md:mb-0">
+            <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <div class="text-center mb-4 md:mb-0">
+            <p>&copy; 2024 Mon Blog. Tous droits réservés.</p>
+          </div>
+          <div class="flex space-x-4">
+            <a href="#" class="text-white hover:text-gray-400">Accueil
+            </a>
+          </div>
+        </div>
+    </footer>  
+
+</body>
+
+</html>
