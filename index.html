@@ -2,135 +2,202 @@
 <html lang="fr">
 
 <head>
+    <!-- Métadonnées de base -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Voyage & Cuisine</title>
+
+    <!-- Intégration de Tailwind CSS via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Polices Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Styles personnalisés -->
+    <style>
+        /* Définition des polices */
+        body {
+            font-family: 'Roboto', sans-serif; /* Police principale */
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif; /* Police pour les titres */
+        }
+
+        /* Animation de zoom au survol */
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        /* Effet de soulignement animé pour les liens */
+        .hover-underline {
+            position: relative;
+        }
+        .hover-underline::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: currentColor;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        .hover-underline:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100 text-gray-800">
 
-    <!-- Header -->
-    <header class="bg-blue-600 text-white p-6">
+    <!-- En-tête du site -->
+    <header class="bg-blue-600 text-white p-6 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
+            <!-- Titre du blog -->
             <h1 class="text-4xl font-bold">Voyage & Cuisine</h1>
+
+            <!-- Navigation principale -->
             <nav>
                 <ul class="flex space-x-4">
-                    <li><a href="#" class="hover:underline">Accueil</a></li>
-                    <li><a href="#" class="hover:underline">Voyage</a></li>
-                    <li><a href="#" class="hover:underline">Cuisine</a></li>
-                    <li><a href="#" class="hover:underline">À propos</a></li>
-                    <li><a href="#" class="hover:underline">Contact</a></li>
+                    <li><a href="#" class="hover-underline">Accueil</a></li>
+                    <li><a href="#" class="hover-underline">Voyage</a></li>
+                    <li><a href="#" class="hover-underline">Cuisine</a></li>
+                    <li><a href="#" class="hover-underline">À propos</a></li>
+                    <li><a href="#" class="hover-underline">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- Contenu principal -->
     <main class="mt-10 mx-auto max-w-4xl px-6">
 
-        <!-- SECTION ARTICLES VEDETTES -->
+        <!-- SECTION : ARTICLES VEDETTES -->
         <section class="mb-12">
             <h2 class="text-3xl font-semibold mb-6">Articles Vedettes</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <article class="bg-white p-6 rounded-lg shadow-md">
-                <img src="./image/tokyo.jpg" alt="tokyo" class="mb-4 rounded-lg">
-                <h3 class="text-2xl font-bold mb-2">Découverte de Tokyo</h3>
-                <p class="text-gray-700">Explorez les merveilles de Tokyo, une ville où la tradition rencontre la modernité.</p>
-                <a href="./content/tokyo.html" class="text-blue-600 hover:underline mt-4 block">Lire plus</a>
-              </article>
-              <article class="bg-white p-6 rounded-lg shadow-md">
-                <img src="./image/bouailbaisse.jpg" alt="bouillabaisse" class="mb-4 rounded-lg">
-                <h3 class="text-2xl font-bold mb-2">La Bouillabaisse Marseillaise</h3>
-                <p class="text-gray-700">Apprenez à préparer la bouillabaisse, un délice de la cuisine provençale.</p>
-                <a href="./content/bouillabaisse.html" class="text-blue-600 hover:underline mt-4 block">Lire plus</a>
-              </article>
-              <article class="bg-white p-6 rounded-lg shadow-md">
-                <img src="./image/paris.jpg" alt="paris" class="mb-4 rounded-lg">
-                <h3 class="text-2xl font-bold mb-2">Itinéraire à Paris</h3>
-                <p class="text-gray-700">Un guide complet pour explorer Paris en cinq jours, de la Tour Eiffel à Montmartre.</p>
-                <a href="./content/paris.html" class="text-blue-600 hover:underline mt-4 block">Lire plus</a>
-              </article>
-            </div>
-          </section>
+                <!-- Article 1 : Découverte de Tokyo -->
+                <article class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <img src="./image/tokyo.jpg" alt="tokyo" class="mb-4 rounded-lg w-full h-48 object-cover">
+                    <h3 class="text-2xl font-bold mb-2">Découverte de Tokyo</h3>
+                    <p class="text-gray-700">Explorez les merveilles de Tokyo, une ville où la tradition rencontre la modernité.</p>
+                    <a href="./content/tokyo.html" class="text-blue-600 hover:underline mt-4 block">Lire plus</a>
+                </article>
 
-          <!-- SECTION CATEGORIES -->
-          <section class="mb-12">
+                <!-- Article 2 : La Bouillabaisse Marseillaise -->
+                <article class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <img src="./image/bouailbaisse.jpg" alt="bouillabaisse" class="mb-4 rounded-lg w-full h-48 object-cover">
+                    <h3 class="text-2xl font-bold mb-2">La Bouillabaisse Marseillaise</h3>
+                    <p class="text-gray-700">Apprenez à préparer la bouillabaisse, un délice de la cuisine provençale.</p>
+                    <a href="./content/bouillabaisse.html" class="text-blue-600 hover:underline mt-4 block">Lire plus</a>
+                </article>
+
+                <!-- Article 3 : Itinéraire à Paris -->
+                <article class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <img src="./image/paris.jpg" alt="paris" class="mb-4 rounded-lg w-full h-48 object-cover">
+                    <h3 class="text-2xl font-bold mb-2">Itinéraire à Paris</h3>
+                    <p class="text-gray-700">Un guide complet pour explorer Paris en cinq jours, de la Tour Eiffel à Montmartre.</p>
+                    <a href="./content/paris.html" class="text-blue-600 hover:underline mt-4 block">Lire plus</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION : CATÉGORIES D'ARTICLES -->
+        <section class="mb-12">
             <h2 class="text-3xl font-semibold mb-6">Catégories d'Articles</h2>
             <div class="space-y-4">
-              <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
-                <span class="bg-blue-600 text-white text-sm font-medium px-3 py-1 rounded-full">Voyage</span>
-                <p class="text-gray-700">Découvrez nos articles sur les destinations de voyage.</p>
-              </div>
-              <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
-                <span class="bg-green-600 text-white text-sm font-medium px-3 py-1 rounded-full">Cuisine</span>
-                <p class="text-gray-700">Explorez nos recettes et critiques de restaurants.</p>
-              </div>
-              <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
-                <span class="bg-red-600 text-white text-sm font-medium px-3 py-1 rounded-full">Culture</span>
-                <p class="text-gray-700">Lisez des articles sur la culture et les traditions culinaires.</p>
-              </div>
-              <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
-                <span class="bg-purple-600 text-white text-sm font-medium px-3 py-1 rounded-full">Photographie</span>
-                <p class="text-gray-700">Admirez nos galeries de photos de voyage et de cuisine.</p>
-              </div>
-            </div>
-          </section>
+                <!-- Catégorie 1 : Voyage -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover-scale">
+                    <span class="bg-blue-600 text-white text-sm font-medium px-3 py-1 rounded-full">Voyage</span>
+                    <p class="text-gray-700">Découvrez nos articles sur les destinations de voyage.</p>
+                </div>
 
-          <!-- SECTION ARTICLES RECENTS -->
-          <section class="mb-12">
+                <!-- Catégorie 2 : Cuisine -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover-scale">
+                    <span class="bg-green-600 text-white text-sm font-medium px-3 py-1 rounded-full">Cuisine</span>
+                    <p class="text-gray-700">Explorez nos recettes et critiques de restaurants.</p>
+                </div>
+
+                <!-- Catégorie 3 : Culture -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover-scale">
+                    <span class="bg-red-600 text-white text-sm font-medium px-3 py-1 rounded-full">Culture</span>
+                    <p class="text-gray-700">Lisez des articles sur la culture et les traditions culinaires.</p>
+                </div>
+
+                <!-- Catégorie 4 : Photographie -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover-scale">
+                    <span class="bg-purple-600 text-white text-sm font-medium px-3 py-1 rounded-full">Photographie</span>
+                    <p class="text-gray-700">Admirez nos galeries de photos de voyage et de cuisine.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION : ARTICLES RÉCENTS -->
+        <section class="mb-12">
             <h2 class="text-3xl font-semibold mb-6">Articles Récents</h2>
             <ul class="space-y-4">
-              <li class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-2xl font-bold mb-1">Titre de l'Article 1</h3>
-                <p class="text-gray-500 mb-2">Publié le 12 décembre 2024</p>
-                <p class="text-gray-700">Un aperçu rapide de l'article pour susciter l'intérêt du lecteur.</p>
-              </li>
-              <li class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-2xl font-bold mb-1">Titre de l'Article 2</h3>
-                <p class="text-gray-500 mb-2">Publié le 10 décembre 2024</p>
-                <p class="text-gray-700">Un aperçu rapide de l'article pour susciter l'intérêt du lecteur.</p>
-              </li>
-              <li class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-2xl font-bold mb-1">Titre de l'Article 3</h3>
-                <p class="text-gray-500 mb-2">Publié le 8 décembre 2024</p>
-                <p class="text-gray-700">Un aperçu rapide de l'article pour susciter l'intérêt du lecteur.</p>
-              </li>
+                <!-- Article 1 -->
+                <li class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <h3 class="text-2xl font-bold mb-1">Découverte de Tokyo</h3>
+                    <p class="text-gray-500 mb-2">Publié le 12 décembre 2024</p>
+                    <p class="text-gray-700">Un aperçu rapide de l'article pour susciter l'intérêt du lecteur.</p>
+                </li>
+
+                <!-- Article 2 -->
+                <li class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <h3 class="text-2xl font-bold mb-1">La Bouillabaisse Marseillaise</h3>
+                    <p class="text-gray-500 mb-2">Publié le 10 décembre 2024</p>
+                    <p class="text-gray-700">Un aperçu rapide de l'article pour susciter l'intérêt du lecteur.</p>
+                </li>
+
+                <!-- Article 3 -->
+                <li class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <h3 class="text-2xl font-bold mb-1">Itinéraire à Paris</h3>
+                    <p class="text-gray-500 mb-2">Publié le 8 décembre 2024</p>
+                    <p class="text-gray-700">Un aperçu rapide de l'article pour susciter l'intérêt du lecteur.</p>
+                </li>
             </ul>
-          </section>
-          
-          <!-- SECTION FORMULAIRES -->
-          <section class="mb-12">
+        </section>
+
+        <!-- SECTION : FORMULAIRE D'INSCRIPTION -->
+        <section class="mb-12">
             <h2 class="text-3xl font-semibold mb-6">Abonnez-vous à notre Lettre d'Information</h2>
-            <form class="bg-white p-6 rounded-lg shadow-md">
-              <div class="mb-4">
-                <label for="email" class="block text-gray-700 font-medium mb-2">Adresse E-mail</label>
-                <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
-              </div>
-              <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600">S'abonner</button>
+            <form class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 font-medium mb-2">Adresse E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600">S'abonner</button>
             </form>
-          </section>
-          
+        </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Pied de page -->
     <footer class="bg-gray-800 text-white p-6 mt-12">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div class="flex space-x-4 mb-4 md:mb-0">
-            <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-          <div class="text-center mb-4 md:mb-0">
-            <p>&copy; 2024 Mon Blog. Tous droits réservés.</p>
-          </div>
-          <div class="flex space-x-4">
-            <a href="#" class="text-white hover:text-gray-400">Accueil
-            </a>
-          </div>
+            <!-- Liens vers les réseaux sociaux -->
+            <div class="flex space-x-4 mb-4 md:mb-0">
+                <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <!-- Droits d'auteur -->
+            <div class="text-center mb-4 md:mb-0">
+                <p>&copy; 2024 Mon Blog. Tous droits réservés.</p>
+            </div>
+
+            <!-- Lien vers l'accueil -->
+            <div class="flex space-x-4">
+                <a href="#" class="text-white hover:text-gray-400">Accueil</a>
+            </div>
         </div>
-    </footer>  
+    </footer>
 
 </body>
 
